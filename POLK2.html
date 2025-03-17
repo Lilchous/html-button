@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html>
+<head>
+ <meta charset = "UTF-8">
+<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+<title> uvelichenie znachenia v 2 raza </title>
+<head>
+<body>
+<input type="text" id="inputField1" placeholder="vvedite chislo">
+<input type="text" id="inputField2" placeholder="result" readonly>
+<p id = "result"></p>
+<script>
+function doubleValue() {
+const input1 = document.getElementById("inputField1").value.trim();
+const input2 = document.getElementById("inputField2");
+
+if (!isNaN(input1) && input1 !== "")
+{
+const doubledValue = parseFloat(input1) *2;
+input2.value = doubledValue;
+} else {
+alert("pogaluysta, vvedite chislovoe znachenie v pervom pole!");
+}
+}
+</script>
+<button onclick="doubleValue()"> uvelichit v dva raza </button>
+</body>
+</html>
