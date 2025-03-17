@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html>
+<head>
+ <meta charset = "UTF-8">
+<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+<title>proverka chislovogo znachenia </title>
+<head>
+<body>
+<input type="text" id="inputField" placeholder="vvedite chislo">
+<p id = "result"></p>
+<script>
+function checkInput() {
+const input = document.getElementById("inputField").value.trim();
+const resultElement = document.getElementById("result");
+
+if (!isNaN(parseFloat(input)) && input !== "")
+{
+resultElement.textContent = "vvedeno chislovoe znachenie:" + input;
+} else {
+resultElement.textContent="vvedeno ne chislovoe znachenie!";
+}
+}
+</script>
+<button onclick="checkInput()"> proverit </button>
+</body>
+</html>
